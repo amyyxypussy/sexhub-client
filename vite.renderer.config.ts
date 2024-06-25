@@ -20,6 +20,7 @@ export default defineConfig((env) => {
           index: path.resolve(__dirname, "html", "index.html"),
           login: path.resolve(__dirname, "html", "login.html"),
           dialog: path.resolve(__dirname, "html", "dialog.html"),
+          floatWindow: path.resolve(__dirname, "html", "floating-window.html"),
         },
       },
     },
