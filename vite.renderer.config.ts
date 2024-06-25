@@ -7,6 +7,8 @@ import vue from '@vitejs/plugin-vue'
 import vueJsxPlugin from '@vitejs/plugin-vue-jsx'
 import devtools from 'vite-plugin-vue-devtools'
 
+import autoImport from 'unplugin-auto-import/vite'
+
 // https://vitejs.dev/config
 export default defineConfig((env) => {
   const forgeEnv = env as ConfigEnv<'renderer'>
@@ -28,7 +30,26 @@ export default defineConfig((env) => {
         }
       }
     },
-    plugins: [pluginExposeRenderer(name), vueJsxPlugin(), vue(), devtools()],
+    plugins: [
+      pluginExposeRenderer(name),
+      vueJsxPlugin(),
+      vue(),
+      devtools(),
+      autoImport({
+        include: [
+          /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+          /\.vue$/,
+          /\.vue\?vue/ // .vue
+        ],
+        dts: './types/auto-import.d.ts',
+        eslintrc: {
+          enabled: true, // Default `false`
+          filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
+          globalsPropValue: true // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
+        },
+        imports: ['vue', 'vue-router']
+      })
+    ],
     resolve: {
       preserveSymlinks: true
     },
