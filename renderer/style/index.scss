@@ -1,0 +1,65 @@
+@use "fonts";
+
+body {
+  height: 100%;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  user-select: none;
+  font-family: 'PingFangSC', Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+.drag {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+.btn-icon-wrap {
+  @apply h-full w-full flex items-center justify-center;
+}
+
+.loading-wrap {
+  background: linear-gradient(90deg, rgba(50, 50, 50, 0.06) 25%, rgba(50, 50, 50, 0.15) 37%, rgba(50, 50, 50, 0.06) 63%);
+  background-size: 400% 100% !important;
+  animation-name: css-xu9wm8-ant-skeleton-loading;
+  animation-duration: 1.4s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.opt-icon {
+  @apply flex h-7 w-7 cursor-pointer items-center justify-center rounded-md text-base hover:bg-gray-200 text-secondary;
+}
+
+.page-wrap {
+  @apply flex h-full w-full flex-col px-6;
+}
+
+@keyframes css-xu9wm8-ant-skeleton-loading {
+  0% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}

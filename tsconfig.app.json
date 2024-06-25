@@ -3,6 +3,13 @@
   "include": [
     "types/env.d.ts",
     "renderer/**/*",
+    "electron/**/*.ts",
+    "types/forge.env.d.ts",
+    "types/ipc-event.d.ts",
+    "types/app-setting.ts",
+    "types/auto-import.d.ts",
+    "types/components.d.ts",
+    "types/router-meta.d.ts",
     "renderer/**/*.vue", "types/env.d.ts", "renderer/**/*.tsx"],
   "exclude": [
     "renderer/**/__tests__/*"

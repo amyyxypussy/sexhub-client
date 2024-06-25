@@ -15,6 +15,9 @@ pids
 *.seed
 *.pid.lock
 .DS_Store
+types/components.d.ts
+
+.idea
 
 .eslintrc-auto-import.json
 types/auto-import.d.ts
