@@ -5,6 +5,7 @@ import path from 'node:path'
 
 import vue from '@vitejs/plugin-vue'
 import vueJsxPlugin from '@vitejs/plugin-vue-jsx'
+import devtools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config
 export default defineConfig((env) => {
@@ -27,7 +28,7 @@ export default defineConfig((env) => {
         }
       }
     },
-    plugins: [pluginExposeRenderer(name), vueJsxPlugin(), vue()],
+    plugins: [pluginExposeRenderer(name), vueJsxPlugin(), vue(), devtools()],
     resolve: {
       preserveSymlinks: true
     },
