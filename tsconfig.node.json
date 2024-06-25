@@ -6,12 +6,10 @@
     "cypress.config.*",
     "nightwatch.conf.*",
     "playwright.config.*",
-    "electron/**/*.ts",
     "vite.renderer.config.ts",
     "vite.base.config.ts",
     "vite.main.config.ts",
     "vite.preload.config.ts",
-    "types/forge.env.d.ts",
     "forge.config.ts"
   ],
   "compilerOptions": {
