@@ -1,17 +1,17 @@
 export const meta = defineViewMeta({
   type: 'view',
   keepAlive: true,
-  space: 'auth',
-  order: 2,
+  space: 'image',
+  order: 4,
   sidebarPosition: 'top',
   title: useSideBarTitle(() => (
     <>
-      <div class="i-fluent:people-team-48-filled"></div>
-      <span class="mt-1.5 text-xs">作者</span>
+      <div class="i-sh:image"></div>
+      <span class="mt-1.5 text-xs">图片</span>
     </>
   ))
 })
 
 export default defineComponent(() => {
-  return () => <div class="text-red">cdccdscd作者</div>
+  return () => <div></div>
 })
