@@ -3,6 +3,7 @@ import type { Component } from 'vue'
 import { ConfigProvider, theme } from 'ant-design-vue'
 import '@/style/index.scss'
 import 'virtual:uno.css'
+import '@unocss/reset/tailwind-compat.css'
 import themes from './themes'
 
 export default function appBuilder(root: Component) {

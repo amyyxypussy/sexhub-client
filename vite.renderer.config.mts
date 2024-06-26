@@ -1,5 +1,6 @@
 import type { ConfigEnv, UserConfig } from 'vite'
 import { defineConfig } from 'vite'
+// @ts-ignore
 import { pluginExposeRenderer, getEnvDefine } from './vite.base.config'
 import path from 'node:path'
 
@@ -15,6 +16,7 @@ import UnoCSS from 'unocss/vite'
 
 // https://vitejs.dev/config
 export default defineConfig((env) => {
+  // @ts-ignore
   const forgeEnv = env as ConfigEnv<'renderer'>
   const { root, mode, forgeConfigSelf } = forgeEnv
   const name = forgeConfigSelf.name ?? ''
@@ -65,7 +67,7 @@ export default defineConfig((env) => {
           },
           {
             from: './renderer/util/view.ts',
-            imports: ['ViewModel', 'SideBarModel'],
+            imports: ['ViewModel', 'SideBarModel', 'ViewEntity'],
             type: true
           }
         ]

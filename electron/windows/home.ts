@@ -14,6 +14,7 @@ export function createHomeWindow() {
 
   homeWindow.once('ready-to-show', () => {
     homeWindow?.show()
+    homeWindow?.webContents.openDevTools()
   })
 
   return homeWindow
