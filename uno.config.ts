@@ -26,7 +26,7 @@ export default defineConfig({
     presetUno(),
     presetIcons({
       collections: {
-        sh: FileSystemIconLoader('./renderer/assets/icon', (svg) =>
+        sh: FileSystemIconLoader('./renderer/assets/icons', (svg) =>
           svg.replace(/#fff/, 'currentColor')
         )
       }

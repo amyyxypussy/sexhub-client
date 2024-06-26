@@ -25,6 +25,7 @@ const sidebarBottomRoutes = inject(sidebarBottom)
         :key="item.routePath"
         class="no-drag sidebar-top-item-wrap text-secondary"
         :class="{ '!text-primary': route.meta.space === item.space }"
+        @click="router.push(item.routePath)"
       >
         <Component :is="item.title" />
       </div>
